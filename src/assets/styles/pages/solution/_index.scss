@@ -1,0 +1,39 @@
+@use "./../../init" as *;
+
+@use "./solution_banner";
+@use "./solution_content";
+@use "./solution_categories";
+@use "./solution_modal";
+@use "./solution_toast";
+@use "./solution_badge";
+@use "./solution.noData";
+
+.l-solution {
+    &__banner {
+        margin-bottom: 10rem;
+
+        @include breakpoint("tablet") {
+            margin-bottom: 8rem;
+        }
+
+        @include breakpoint("mobile") {
+            margin-bottom: 6rem;
+        }
+    }
+
+    &__content {
+        margin-bottom: 8rem;
+
+        @include breakpoint("mobile") {
+            margin-bottom: 5rem;
+        }
+    }
+
+    &__categories {
+        margin-bottom: 8rem;
+
+        @include breakpoint("mobile") {
+            margin-bottom: 5rem;
+        }
+    }
+}

@@ -1,0 +1,43 @@
+@use "./../../init" as *;
+
+@use "./solution_cta";
+@use "./solution_products";
+
+.c-solution-content {
+    display: flex;
+    gap: 0 2.4rem;
+    scroll-margin-top: 16rem;
+
+    @include breakpoint("laptop") {
+        flex-direction: column-reverse;
+        gap: 3rem 0;
+        scroll-margin-top: 10rem;
+    }
+
+    @include breakpoint("mobile") {
+        gap: 5rem 0;
+    }
+
+    &__cta {
+        width: 64rem;
+
+        @include breakpoint("laptop") {
+            width: 100%;
+        }
+
+        @include breakpoint("mobile") {
+            width: 100%;
+        }
+    }
+
+    &__products {
+        flex: 1;
+
+        @include breakpoint("laptop") {
+        }
+
+        @include breakpoint("mobile") {
+            padding: 0 1.5rem;
+        }
+    }
+}

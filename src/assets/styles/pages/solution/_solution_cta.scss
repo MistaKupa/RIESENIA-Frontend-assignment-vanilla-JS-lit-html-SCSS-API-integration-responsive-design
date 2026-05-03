@@ -1,0 +1,145 @@
+@use "./../../init" as *;
+
+.c-solution-cta {
+    position: relative;
+    width: 100%;
+    height: 54rem;
+    overflow: hidden;
+    border-radius: 0.8rem;
+
+    @include breakpoint("laptop") {
+        width: 100%;
+        border-radius: 0;
+    }
+
+    @include breakpoint("mobile") {
+        width: 100%;
+
+        border-radius: 0;
+    }
+
+    &__image {
+        position: absolute;
+        inset: 0;
+        background: url("../../../images/dewalt_multi_head_drill.jpg");
+        background-color: var(--c-bg);
+        background-position: center;
+        background-size: cover;
+        border-radius: 0.8rem;
+
+        @include breakpoint("laptop") {
+            border-radius: 0;
+        }
+
+        @include breakpoint("mobile") {
+            border-radius: 0;
+        }
+    }
+
+    &__overlay {
+        position: absolute;
+        inset: 0;
+        background: rgb(0 0 0 / 40%);
+        border-radius: 0.8rem;
+
+        @include breakpoint("laptop") {
+            border-radius: 0;
+        }
+
+        @include breakpoint("mobile") {
+            border-radius: 0;
+        }
+    }
+
+    &__content {
+        position: relative;
+        display: flex;
+        flex-direction: column;
+        gap: 2.4rem;
+        align-items: flex-start;
+        justify-content: flex-end;
+        height: 100%;
+        padding: 4.8rem;
+        padding-right: 17.2rem;
+        color: #fff;
+
+        @include breakpoint("mobile") {
+            padding: 2.4rem;
+        }
+
+        &__title {
+            margin: 0;
+            font-family: "Wix Madefor Display", sans-serif;
+            font-size: 3.5rem;
+            font-weight: 800;
+            line-height: 1.2;
+
+            @include breakpoint("mobile") {
+                font-size: 2.5rem;
+            }
+        }
+
+        &__description {
+            margin: 0;
+            font-size: 1.6rem;
+            font-weight: 400;
+            line-height: 1.6;
+
+            @include breakpoint("mobile") {
+                font-size: 1.4rem;
+            }
+
+            strong {
+                font-weight: 800;
+            }
+        }
+
+        &__button {
+            display: flex;
+            gap: 0.8rem;
+            align-items: center;
+            justify-content: space-between;
+            padding: 1.6rem 2rem;
+            color: #fff;
+            cursor: pointer;
+            background: var(--c-btn);
+            border: none;
+            border-radius: 0.4rem;
+            transition: background 0.2s ease;
+
+            @include breakpoint("mobile") {
+                padding: 1.2rem 2rem;
+            }
+
+            &:hover {
+                background: var(--c-btn-hover);
+            }
+
+            &:active {
+                background: var(--c-btn-active);
+            }
+
+            .sc-text {
+                font-family: "Wix Madefor Display", sans-serif;
+                font-size: 1.6rem;
+                font-weight: 700;
+                white-space: nowrap;
+
+                @include breakpoint("mobile") {
+                    font-size: 1.3rem;
+                }
+            }
+
+            .sc-icon {
+                flex-shrink: 0;
+                width: 2rem;
+                height: 2rem;
+
+                @include breakpoint("mobile") {
+                    width: 1.8rem;
+                    height: 1.8rem;
+                }
+            }
+        }
+    }
+}
