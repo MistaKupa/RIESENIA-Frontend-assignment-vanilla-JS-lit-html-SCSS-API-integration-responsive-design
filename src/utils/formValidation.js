@@ -4,12 +4,10 @@ const phoneRegex = /^(\+421|0)\s?\d{3}\s?\d{3}\s?\d{3}$/;
 ////////////////// FIELD VALIDATIONS ///////////////////////
 export const validateEmailFormat = (email) => {
     if (!email) {
-        console.log("Email je povinný!");
         return "Email je povinný!";
     }
 
     if (!emailRegex.test(email)) {
-        console.log("Email je povinný!");
         return "Nesprávny formát emailu!";
     }
 
