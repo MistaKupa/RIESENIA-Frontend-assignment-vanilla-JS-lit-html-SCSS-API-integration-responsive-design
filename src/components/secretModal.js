@@ -43,15 +43,15 @@ const handleSubmit = async (e) => {
     const formData = new FormData(form);
 
     const email = formData.get("email");
-    const nameSurename = formData.get("nameSurename");
+    const nameSurname = formData.get("nameSurname");
     const phone = formData.get("phone");
 
     const emailInput = form.querySelector('input[name="email"]');
-    const nameSurenameInput = form.querySelector('input[name="nameSurename"]');
+    const nameSurnameInput = form.querySelector('input[name="nameSurname"]');
     const phoneInput = form.querySelector('input[name="phone"]');
 
     const emailFormatError = validateEmailFormat(email);
-    const nameSurnameError = validateNameSurename(nameSurename);
+    const nameSurnameError = validate(nameSurname);
     const phoneFormatError = validatePhoneFormat(phone);
 
     if (emailFormatError) {
@@ -59,7 +59,7 @@ const handleSubmit = async (e) => {
     }
 
     if (nameSurnameError) {
-        showError(nameSurenameInput, nameSurnameError);
+        showError(nameSurnameInput, nameSurnameError);
     }
 
     if (phoneFormatError) {
