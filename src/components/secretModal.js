@@ -32,7 +32,10 @@ const handleCloseModal = (e) => {
     form.querySelectorAll("input").forEach((input) => hideError(input));
 
     modal.classList.toggle("is-open");
+    document.body.style.overflow = "visible"
     document.querySelector(".js-cta-button").focus();
+    
+    form.reset();
 };
 
 const handleSubmit = async (e) => {
