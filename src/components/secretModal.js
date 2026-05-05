@@ -51,7 +51,7 @@ const handleSubmit = async (e) => {
     const phoneInput = form.querySelector('input[name="phone"]');
 
     const emailFormatError = validateEmailFormat(email);
-    const nameSurnameError = validate(nameSurname);
+    const nameSurnameError = validateNameSurename(nameSurname);
     const phoneFormatError = validatePhoneFormat(phone);
 
     if (emailFormatError) {
