@@ -25,6 +25,7 @@ const handleCtaClick = () => {
     const modalForm = document.querySelector(".js-modal-form");
 
     modal.classList.toggle("is-open");
+    document.body.style.overflow = "hidden";
 
     setTimeout(() => {
         modalForm.querySelector("input, button").focus();
