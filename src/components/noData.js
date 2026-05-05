@@ -9,7 +9,6 @@ export const renderNoDataMessage = (message) => {
             width="40"
             height="40"
             fill="currentColor"
-            class="bi bi-info-circle-fill"
             viewBox="0 0 16 16"
         >
             <path
